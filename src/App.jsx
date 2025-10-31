@@ -1,7 +1,14 @@
 import "./App.css";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
-  return <h1 className="text-red-700">helo</h1>;
+  return (
+    <div className="entire-page">
+      <Header />
+      <Hero />
+    </div>
+  );
 }
 
 export default App;
