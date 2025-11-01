@@ -4,7 +4,7 @@ export default function Header() {
       <span>
         <img className="h-16 w-auto" src="/troll-face.png" alt="TrollFace" />
       </span>
-      <span className="text-purple-200 text-5xl font-bold">Meme Generator</span>
+      <span className="text-purple-200 text-5xl font-bold">createMeme</span>
     </nav>
   );
 }
