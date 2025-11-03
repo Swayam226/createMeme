@@ -24,14 +24,12 @@ export default function Hero() {
   return (
     <main className="w-full h-full flex justify-between flex-row mt-10 items-center gap-36">
       {/* Left section — form */}
-      <section className="pt-10 h-[500px] flex-1 flex flex-col justify-center items-center bg-gradient-to-r from-violet-600 to-green-400 px-10 rounded-3xl hover:scale-103 gap-5 transition-transform duration-300 ml-10 hover:shadow-2xl shadow-xl">
+      <section className="pt-10 h-[500px] flex-1 flex flex-col justify-center items-center backdrop-blur-sm bg-white/15 backdrop-saturate-200 px-10 rounded-3xl border border-white/30 hover:scale-103 gap-5 transition-transform duration-300 ml-10 hover:shadow-2xl shadow-xl">
         <div className="text-4xl text-center w-full pb-5">
-          <span className="text-purple-200 font-bold">
-            Best you can think of
-          </span>
+          <span className="text-black font-bold">Best you can think of</span>
         </div>
         <div className="w-full flex flex-col justify-around items-center gap-6">
-          <div className="w-full text-lg text-purple-200 font-semibold">
+          <div className="w-full text-lg text-black-200 font-semibold">
             <label>
               Top Text
               <input
@@ -45,7 +43,7 @@ export default function Hero() {
             </label>
           </div>
 
-          <div className="w-full text-lg text-purple-200 font-semibold">
+          <div className="w-full text-lg text-black-200 font-semibold">
             <label>
               Bottom Text
               <input
@@ -61,13 +59,13 @@ export default function Hero() {
         </div>
 
         <div className="w-full font-semibold mt-4">
-          <button className="h-15 w-full bg-gradient-to-r from-violet-700 to-green-500 rounded-2xl text-xl text-purple-200 shadow-md hover:shadow-3xl hover:scale-102 active:scale-95 transform transition-transform duration-300">
+          <button className="h-15 w-full bg-linear-to-r from-violet-700 to-green-500 rounded-2xl text-xl text-purple-200 shadow-md hover:shadow-3xl hover:scale-102 active:scale-95 transform transition-transform duration-300">
             Get the damn meme!!
           </button>
         </div>
       </section>
 
-      <section className="flex-1 h-[500px] flex items-center justify-center bg-gradient-to-r from-violet-600 to-green-400 p-10 rounded-3xl hover:scale-103 transition-transform duration-300 hover:shadow-2xl shadow-xl mr-10">
+      <section className="flex-1 h-[500px] flex items-center justify-center backdrop-blur-sm bg-white/15 backdrop-saturate-200 border border-white/30 p-10 rounded-3xl hover:scale-103 transition-transform duration-300 hover:shadow-2xl shadow-xl mr-10">
         <div className="relative w-full h-full rounded-2xl overflow-hidden items-center justify-center flex flex-col">
           <span className="absolute top-15 left-1/2 -translate-x-1/2 text-center font-[impact,sans-serif] text-2xl uppercase text-white tracking-[1px] meme-text-shadow">
             {memeInfo.toptext}
