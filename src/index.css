@@ -4,6 +4,16 @@ html,
 body,
 #root {
   height: 100%;
+  font-family: "MyFont", sans-serif;
+}
+
+@layer base {
+  @font-face {
+    font-family: "MyFont";
+    src: url("/src/assets/fonts/BADABB__.ttf") format("truetype");
+    /* font-weight: 400; */
+    /* font-style: normal; */
+  }
 }
 
 @layer utilities {
