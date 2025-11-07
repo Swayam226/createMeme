@@ -22,7 +22,7 @@ export default function Hero() {
 
   // in this react is the single source of truth
   return (
-    <main className="w-full h-full flex justify-between flex-row mt-10 items-center gap-36 tracking-widest">
+    <main className="w-full h-full flex justify-between flex-row mt-10 items-center gap-20 tracking-widest">
       {/* Left section — form */}
       <section className="pt-10 h-[500px] flex-1 flex flex-col justify-center items-center backdrop-blur-sm bg-white/15 backdrop-saturate-200 px-10 rounded-3xl border border-white/30 hover:scale-103 gap-5 transition-transform duration-300 ml-10 hover:shadow-2xl shadow-xl">
         <div className="text-4xl text-center w-full pb-5">
