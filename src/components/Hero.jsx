@@ -59,7 +59,7 @@ export default function Hero() {
         </div>
 
         <div className="w-full font-semibold mt-4">
-          <button className="tracking-widest font-we h-15 w-full bg-linear-to-r from-violet-700 to-green-500 rounded-2xl text-xl text-purple-200 shadow-md hover:shadow-3xl hover:scale-102 active:scale-95 transform transition-transform duration-300">
+          <button className="tracking-widest font-we h-15 w-full bg-linear-to-r from-violet-700 to-green-500 rounded-2xl text-xl text-black-200 font-extralight shadow-md hover:shadow-3xl hover:scale-102 active:scale-95 transform transition-transform duration-300">
             Get the damn meme!!
           </button>
         </div>
