@@ -33,12 +33,13 @@ export default function Hero() {
             <label>
               Top Text
               <input
-                className="rounded-md font-semibold p-2 mt-1 w-full h-12 border-gray-400 border-2 bg-purple-300 text-black shadow-md"
+                className="rounded-md font-semibold p-2 mt-1 w-full h-12 border-gray-400 border-2 bg-purple-300 text-black shadow-md hover:border-violet-400 transition-all duration-200 tracking-widest placeholder:font-extralight"
                 type="text"
                 name="toptext"
                 id="top-text"
                 onChange={handleChange}
                 value={memeInfo.toptext} // part of controlled components
+                placeholder="Enter top meme text"
               />
             </label>
           </div>
@@ -47,12 +48,13 @@ export default function Hero() {
             <label>
               Bottom Text
               <input
-                className="rounded-md font-semibold p-2 mt-1 w-full h-12 border-gray-400 border-2 bg-purple-300 text-black shadow-md"
+                className="rounded-md font-semibold p-2 mt-1 w-full h-12 border-gray-400 border-2 bg-purple-300 text-black shadow-md hover:border-violet-400 transition-all duration-200 tracking-widest placeholder:font-extralight"
                 type="text"
                 name="bottomtext"
                 id="bottom-text"
                 onChange={handleChange}
                 value={memeInfo.bottomtext}
+                placeholder="Enter bottom meme text"
               />
             </label>
           </div>
