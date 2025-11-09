@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
   const [memeInfo, setmemeInfo] = useState({
@@ -8,6 +8,14 @@ export default function Hero() {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9k2kuUxms3gQHFAHMBLUTjMSSGC-Zh2Ww&s",
   });
 
+  const [allMemes, setallMemes] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then((data) => setallMemes(data.data.memes));
+  }, []);
+
   function handleChange(event) {
     // console.log("hello");
     const { value, name } = event.currentTarget;
@@ -15,6 +23,15 @@ export default function Hero() {
     setmemeInfo((prevmeme) => ({
       ...prevmeme,
       [name]: value,
+    }));
+  }
+
+  function handleClick() {
+    const random = Math.floor(Math.random() * allMemes.length);
+    const newMemeUrl = allMemes[random].url;
+    setmemeInfo((prev) => ({
+      ...prev,
+      imageUrl: newMemeUrl,
     }));
   }
 
@@ -61,7 +78,10 @@ export default function Hero() {
         </div>
 
         <div className="w-full font-semibold mt-4">
-          <button className="tracking-widest font-we h-15 w-full bg-linear-to-r from-violet-700 to-green-500 rounded-2xl text-xl text-black-200 font-extralight shadow-md hover:shadow-3xl hover:scale-102 active:scale-95 transform transition-transform duration-300">
+          <button
+            className="tracking-widest font-we h-15 w-full bg-linear-to-r from-violet-700 to-green-500 rounded-2xl text-xl text-black-200 font-extralight shadow-md hover:shadow-3xl hover:scale-102 active:scale-95 transform transition-transform duration-300"
+            onClick={handleClick}
+          >
             Get the damn meme!!
           </button>
         </div>
@@ -76,7 +96,7 @@ export default function Hero() {
           <img
             src={memeInfo.imageUrl}
             alt="generated-meme"
-            className="object-cover w-[85%] h-[85%] rounded-xl"
+            className="object-center w-[85%] h-[85%] rounded-xl"
           />
 
           <span className="absolute bottom-15 left-1/2 -translate-x-1/2 text-center font-[impact,sans-serif] text-2xl uppercase text-white tracking-[1px] meme-text-shadow">
